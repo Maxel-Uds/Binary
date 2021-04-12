@@ -1,5 +1,4 @@
 ﻿using System;
-using binary.Entities;
 
 namespace binary
 {
@@ -15,7 +14,6 @@ namespace binary
                 Console.WriteLine("[2] De binário para decimal");
                 Console.WriteLine("[0] Sair");
                 int n = int.Parse(Console.ReadLine());
-                Binary binary;
                 Console.Clear();
 
                 switch(n)
@@ -23,17 +21,13 @@ namespace binary
                     case 1:
                     Console.Write("Digite um número inteiro para transformar em binário: ");
                     int decimalNumber = int.Parse(Console.ReadLine());
-
-                    binary = new Binary(decimalNumber);
-                    Console.WriteLine(binary.DecimalToBinary());
+                    Console.WriteLine(decimalNumber.DecimalToBinary());
                     break;
 
                     case 2:
                     Console.Write("Digite o número binário com espaços entre os digitos: ");
                     string binaryNumber = Console.ReadLine();
-
-                    binary = new Binary(binaryNumber);
-                    Console.WriteLine(binary.BinaryToDecimal());
+                    Console.WriteLine(binaryNumber.BinaryToDecimal());
                     break;
 
                     default:
