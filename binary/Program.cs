@@ -8,13 +8,23 @@ namespace binary
             {
             try
             {
-                Console.WriteLine("Escolha uma opção");
-                Console.WriteLine("---------------------------");
-                Console.WriteLine("[1] De decimal para binário");
-                Console.WriteLine("[2] De binário para decimal");
-                Console.WriteLine("[0] Sair");
-                int n = int.Parse(Console.ReadLine());
-                Console.Clear();
+                int? n = null;
+                while(n != 1 && n != 2 && n != 0)
+                {
+                    Console.WriteLine("Escolha uma opção");
+                    Console.WriteLine("---------------------------");
+                    Console.WriteLine("[1] De decimal para binário");
+                    Console.WriteLine("[2] De binário para decimal");
+                    Console.WriteLine("[0] Sair");
+                    n = int.Parse(Console.ReadLine());
+                    Console.Clear();
+                    if(n != 1 && n != 2 && n != 0)
+                    {
+                        Console.WriteLine($"{n} não é uma opção válida!");
+                        Console.ReadLine();
+                        Console.Clear();
+                    }
+                }
 
                 switch(n)
                 {
