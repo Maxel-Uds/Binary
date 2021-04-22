@@ -6,13 +6,13 @@ namespace binary
     {
     static void Main(string[] args)
         {
-            int? startProgram = 3;
-            while(startProgram == 3 && startProgram != 0)
+            int startOperation = 0;
+            int startProgram = 0;;
+            do
             {
                 try
                 {
-                    int? startOperation = null;
-                    while(startOperation != 1 && startOperation != 2 && startOperation != 0)
+                    do
                     {
                         Console.WriteLine("Escolha uma opção");
                         Console.WriteLine("---------------------------");
@@ -28,6 +28,7 @@ namespace binary
                             Console.Clear();
                         }
                     }
+                    while(startOperation != 1 && startOperation != 2 && startOperation != 0);
 
                     switch(startOperation)
                     {
@@ -48,13 +49,12 @@ namespace binary
                         break;
 
                         default:
-                        startProgram = 0;
+                            startProgram = 0;
                         break;
                     }
                     if(startOperation != 0)
-                    {
-                        startProgram = null; 
-                        while(startProgram != 3 && startProgram != 0)
+                    { 
+                        do
                         {
                             Console.Write("Para efetuar outra operação digite 3, para sair digite 0: ");
                             startProgram = int.Parse(Console.ReadLine());
@@ -65,6 +65,7 @@ namespace binary
                                 Console.Clear();
                             }
                         }
+                        while(startProgram != 3 && startProgram != 0);
                     }
                 }
                 catch(Exception e)
@@ -74,6 +75,7 @@ namespace binary
                     Console.Clear();
                 }
             }
+            while(startProgram == 3 && startProgram != 0);
         }
     }
 }
