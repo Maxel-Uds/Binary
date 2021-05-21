@@ -7,7 +7,7 @@ namespace binary
     static void Main(string[] args)
         {
             int startOperation = 0;
-            int startProgram = 0;;
+            int startProgram = 0;
             do
             {
                 try
