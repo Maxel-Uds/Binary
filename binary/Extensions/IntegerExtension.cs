@@ -17,7 +17,7 @@ namespace System
                     if(Math.Pow(2,i) + sum <= obj)
                     {
                         sum += Math.Pow(2, i);
-                        text.Append("1 ");
+                        text.Append("1");
                         if(firstTime == null)
                         {
                             firstTime = 1;
@@ -27,7 +27,7 @@ namespace System
                     {
                         if(firstTime != null)
                         {
-                            text.Append("0 ");
+                            text.Append("0");
                         }
                     }
                 }

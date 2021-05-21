@@ -4,14 +4,12 @@ namespace System
     {
         public static double BinaryToDecimal(this string obj)
         {
-            string[] digit = obj.Split(' ');
-            int size = digit.Length -1;
             int x = 0;
             double sum = 0;
 
-            for(int i = size; i >= 0; i--)
+            for(int i = (obj.Length - 1); i >= 0; i--)
             {
-                int number = int.Parse(digit[x]);
+                double number = Char.GetNumericValue(obj[x]);
                 if(number == 1)
                 {
                     sum += Math.Pow(2,i);

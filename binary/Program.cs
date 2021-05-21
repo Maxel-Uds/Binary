@@ -19,6 +19,7 @@ namespace binary
                         Console.WriteLine("[1] De decimal para binário");
                         Console.WriteLine("[2] De binário para decimal");
                         Console.WriteLine("[0] Sair");
+                        Console.Write("Opção: ");
                         startOperation = int.Parse(Console.ReadLine());
                         Console.Clear();
                         if(startOperation != 1 && startOperation != 2 && startOperation != 0)
@@ -41,7 +42,7 @@ namespace binary
                         break;
 
                         case 2:
-                        Console.Write("Digite o número binário com espaços entre os digitos: ");
+                        Console.Write("Digite o número binário para convereter para decimal: ");
                         string binaryNumber = Console.ReadLine();
                         Console.WriteLine(binaryNumber.BinaryToDecimal());
                         Console.ReadLine();
@@ -70,7 +71,7 @@ namespace binary
                 }
                 catch(Exception e)
                 {
-                    Console.WriteLine(e.Message);
+                    Console.WriteLine("Error: " + e.Message);
                     Console.ReadLine();
                     Console.Clear();
                 }
